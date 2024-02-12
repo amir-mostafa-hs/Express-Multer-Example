@@ -1,0 +1,16 @@
+{
+  "name": "express-multer-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Amir Mostafa Haji Sadeghian",
+    "email": "amir-mostafa-hs@outlook.com",
+    "url": "https://amir-mostafa-haji-sadeghian.ir/"
+  },
+  "license": "ISC"
+}
