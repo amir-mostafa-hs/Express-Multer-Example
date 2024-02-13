@@ -7,10 +7,7 @@ const mongoose = require("mongoose");
 const connectDB = async (uri) => {
   try {
     mongoose.set("strictQuery", false);
-    return await mongoose.connect(uri, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
+    return await mongoose.connect(uri);
   } catch (err) {
     console.error(err.message);
     // make the process fail
