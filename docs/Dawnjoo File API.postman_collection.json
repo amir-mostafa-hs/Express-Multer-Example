@@ -1,0 +1,203 @@
+{
+	"info": {
+		"_postman_id": "c145182b-b609-49b8-97e6-931bfb05601a",
+		"name": "Dawnjoo File API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19545875"
+	},
+	"item": [
+		{
+			"name": "Get data",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/file/65cb7b8b7f5b1d5bb9b6dcc9?type=image/png",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"file",
+						"65cb7b8b7f5b1d5bb9b6dcc9"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "image/png"
+						}
+					]
+				},
+				"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+			},
+			"response": []
+		},
+		{
+			"name": "Post data",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/amh-x/Pictures/aps.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/file/upload",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"file",
+						"upload"
+					]
+				},
+				"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+			},
+			"response": []
+		},
+		{
+			"name": "Update data",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/amh-x/Pictures/aps.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/file/65cb7b8b7f5b1d5bb9b6dcc9?type=image/png",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"file",
+						"65cb7b8b7f5b1d5bb9b6dcc9"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "image/png"
+						}
+					]
+				},
+				"description": "This is a PUT request and it is used to overwrite an existing piece of data. For instance, after you create an entity with a POST request, you may want to modify that later. You can do that using a PUT request. You typically identify the entity being updated by including an identifier in the URL (eg. `id=1`).\n\nA successful PUT request typically returns a `200 OK`, `201 Created`, or `204 No Content` response code."
+			},
+			"response": []
+		},
+		{
+			"name": "Delete data",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/file/65cb7b8b7f5b1d5bb9b6dcc9?type=image/png",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"file",
+						"65cb7b8b7f5b1d5bb9b6dcc9"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "image/png"
+						}
+					]
+				},
+				"description": "This is a DELETE request, and it is used to delete data that was previously created via a POST request. You typically identify the entity being updated by including an identifier in the URL (eg. `id=1`).\n\nA successful DELETE request typically returns a `200 OK`, `202 Accepted`, or `204 No Content` response code."
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "https://express-multer.onrender.com"
+		}
+	]
+}
