@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const File = new mongoose.Schema({
+const JpegFile = new mongoose.Schema({
   originalName: {
     type: String,
     required: true,
@@ -9,6 +9,44 @@ const File = new mongoose.Schema({
     type: Buffer,
     required: true,
   },
+  fileExtension: {
+    type: String,
+    default: "image/jpeg",
+  },
 });
 
-module.exports = mongoose.model("File", File);
+const PngFile = new mongoose.Schema({
+  originalName: {
+    type: String,
+    required: true,
+  },
+  data: {
+    type: Buffer,
+    required: true,
+  },
+  fileExtension: {
+    type: String,
+    default: "image/png",
+  },
+});
+
+const PDFFile = new mongoose.Schema({
+  originalName: {
+    type: String,
+    required: true,
+  },
+  data: {
+    type: Buffer,
+    required: true,
+  },
+  fileExtension: {
+    type: String,
+    default: "application/pdf",
+  },
+});
+
+module.exports = {
+  JpegFile: mongoose.model("JpegFile", JpegFile),
+  PngFile: mongoose.model("PngFile", PngFile),
+  PDFFile: mongoose.model("PDFFile", PDFFile),
+};
